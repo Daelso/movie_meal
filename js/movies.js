@@ -5,8 +5,11 @@
 var movieTitle = $('#title')
 var moviePlot = $('#plot')
 var posterDisplay = $('#poster')
-var genHorror = $("#generateHorror")
-var genWestern = $("#generateWestern")
+var releaseDate = $('#release-date')
+var imdbLink = $('#imdb-link')
+var userScore = $('#rating')
+
+
 
 
 // MOVIE genre IDs
@@ -91,14 +94,21 @@ function queryMovieDB(moviefromGenre) {
         .then(function (data) {
         	console.log(data)
 		if(data.status_code == 34 || data.poster_path == null || data.adult == true ){
-			errorDefaultHandler() //Defaults to fight club
+			errorDefaultHandler() //Defaults to fight club, westerns are bad
 		}
 		else{
 			movieTitle.text(data.original_title)
+			releaseDate.text("Released: " + data.release_date)
 			moviePlot.text(data.overview)
+			userScore.text("Average User Score: " + data.vote_average + "/10" + " Votes: " + data.vote_count)
+			var imdbPointer = "https://www.imdb.com/title/" + data.imdb_id
+			imdbLink.empty()
+			imdbLink.append("<a href='" + imdbPointer + "'>" + "IMDB - " + data.original_title  + "</a>")
 			var moviePoster = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + data.poster_path
 			posterDisplay.empty()
 			posterDisplay.append("<img src='"+ moviePoster + "'></img>")
+
+
 		}})};
 
 
@@ -106,6 +116,8 @@ function queryMovieDB(moviefromGenre) {
 //////////////////////////
 ///////BTN listeners//////
 /////////////////////////
+var genHorror = $("#generateHorror")
+var genWestern = $("#generateWestern")
 
 genHorror.on('click', generateHorrorMovie)
 genWestern.on('click', generateWesternMovie)
