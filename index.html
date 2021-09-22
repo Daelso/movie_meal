@@ -5,19 +5,132 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Movie & Meal</title>
+  <title>Movie & Meal | A Generator for Indecisive Hungry Movie Buffs</title>
   <meta name="description" content="A simple site to recommend a movie and meal pairing!">
 
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
-  <link rel="stylesheet" href="./css/stylesheet.css">
+  <link rel="stylesheet" href="./assets/stylesheet.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 
 </head>
 
 <body>
+  <section id="landing" class="landing">
+    <div class="wrapper">
+      <header>
+        <h1>Movie & Meal </h1>
+        <h2>A Generator for Indecisive and  Hungry Movie Buffs</h2>
+      </header>
+
+      <section id="form">
+        <form>
+          <span class="sr-only">Search for a recipe using a keyword of your choosing and search for a movie using your genre of interest. You'll be provided with recipes and movies based on your search.</span>
+          <div class="form-inputs flex-container">
+            <div class="food-search-container">
+              <label for="food-search">Find some tasty recipes!</label>
+              <input
+                type="text"
+                id="food-search"
+                name="food-search"
+                placeholder="Try 'chicken' or 'vegan'"
+              />
+            </div>
 
 
+            <div class="genre-search-container">
+              <label for="genre-search">Choose a movie genre!</label>
+              <select id="genre-search" name="genre-search">
+                <option value="28">Action</option>
+                <option value="12">Adventure</option>
+                <option value="16">Animation</option>
+                <option value="35">Comedy</option>
+                <option value="80">Crime</option>
+                <option value="99">Documentary</option>
+                <option value="18">Drama</option>
+                <option value="14">Fantasy</option>
+                <option value="36">History</option>
+                <option value="27">Horror</option>
+                <option value="9648">Mystery</option>
+                <option value="10749">Romance</option>
+                <option value="878">Science Fiction</option>
+                <option value="53">Thriller</option>
+              </select>
+            </div>
+          </div>
+          <!-- /.form-inputs -->
+
+          <div class="button-container submit-button"></div>
+            <button type="submit">Submit</button>
+          
+        </form>
+      </section>
+      <!-- <!-- /#form  -->
+    </div>
+    <!-- /.wrapper -->
+  </section>
+  <!-- /#landing -->
+
+  <div class="wrapper">
+    <main>
+      <section id="results" class="flex-container">
+        <span class="sr-only" id="accessibility-results-heading">
+          <h2>Results</h2> 
+          All links on this page open in a new tab.
+        </span>
+        <section id="recipes" class="results-container flex-container">
+          <h3>Recipes</h3>
+          <ul class="recipe-results flex-container">
+            <!-- recipe results append here -->
+          </ul>
+          <!-- /.recipe-results -->
+        </section>
+        <!-- / #recipes -->
+
+        <section id="movies" class="results-container flex-container">
+          <h3>Movies</h3>
+          <ul class="movie-results flex-container">
+            <!-- movie results append here -->
+          </ul>
+        
+        </section>
+        
+
+        <div class="button-container search-again">
+          <button class="search-again-button">Would you like to Search Again?</button>
+        </div>
+      </section>
+      
+    </main>
+  </div>
+<!-- Jqueries -->
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>    
-	<script src="./js/index.js"></script>
+
+	<script src="./assets/index.js"></script>
+  <footer>
+    <p>
+      Made by
+      <p> Molly, Chase, Jaraad, and Kiyona </p>
+    </p>
+    <p>
+      Data from
+      <a
+        href="https://www.themoviedb.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >The Movie Database</a
+      >
+      &
+      <a
+        href="https://spoonacular.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Spoonacular</a
+      >
+      
+    </p>
+
+  </footer>
+
 </body>
 </html>
