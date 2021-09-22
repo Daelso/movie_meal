@@ -5,9 +5,6 @@ var queryUrl = "https://api.spoonacular.com/food/products/search?query=chicken" 
 var mealTitle = $('#title')
 var mealImage = $('#image')
 
-
-
-
     fetch(queryUrl)
         .then(function (response) {
         return response.json();
@@ -22,16 +19,4 @@ var mealImage = $('#image')
 			mealImage.append("<img src='"+ foodImage + "'></img>")
         });
 
-        
-    
-
-
-
-        // if(data.status == 34 || data.image_path == null){
-		// 	console.log("working")
-		// 	window.location.href = window.location.href;
-        
-        // }
-        // else {
-        // }
 
