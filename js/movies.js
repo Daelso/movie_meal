@@ -38,7 +38,7 @@ var userScore = $('#rating')
 ///////defaults////
 //////////////////
 
-var movieID = 500 //defaults to fight club
+var movieID = 550 //defaults to fight club
 
 var genreID = 37 // Controls the genre ID
 
@@ -118,9 +118,13 @@ function queryMovieDB(moviefromGenre) {
 /////////////////////////
 var genHorror = $("#generateHorror")
 var genWestern = $("#generateWestern")
+var genFantasy = $('#generateFantasy')
+var genTrueRandom = $('#generateTrueRandom')
 
 genHorror.on('click', generateHorrorMovie)
 genWestern.on('click', generateWesternMovie)
+genFantasy.on('click', generateFantasyMovie)
+genTrueRandom.on('click', generateTrueRandom)
 
 ////////////////////////////
 ///////btn functions///////
@@ -137,3 +141,17 @@ function generateWesternMovie (){
 	getGenreList(westernID)
 
 }
+
+function generateFantasyMovie (){
+	var fantasyID = 14
+	getGenreList(fantasyID)
+
+}
+
+
+function generateTrueRandom (){
+	var randomMovieID = Math.floor((Math.random() * 100000) + 1)
+	queryMovieDB(randomMovieID)
+}
+
+
