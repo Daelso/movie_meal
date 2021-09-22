@@ -5,6 +5,7 @@ var queryUrl = "https://api.spoonacular.com/food/products/search?query=chicken" 
 var mealTitle = $('#title')
 var mealImage = $('#image')
 
+function queryMealDB() {
     fetch(queryUrl)
         .then(function (response) {
         return response.json();
@@ -18,5 +19,7 @@ var mealImage = $('#image')
 			mealImage.empty()
 			mealImage.append("<img src='"+ foodImage + "'></img>")
         });
-
+    }
+    
+    queryMealDB();
 
