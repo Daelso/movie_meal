@@ -88,9 +88,34 @@ button {
     font-size: 16px;
 }
 
-
 .genre-search-container {
     max-width: 300px;
+}
+
+.movie-results {
+    max-width: 800px;
+    line-height: 1.5em;
+    border: 2px solid var(--movie);
+}
+
+#title {
+    color: var(--movie);
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+#imdb-link a{
+    color: var(--movie);
+    font-style: italic;
+}
+
+#plot {
+    padding-bottom: 20px;
+}
+
+#poster {
+    margin: 0 auto;
 }
 
 .flex-container {
