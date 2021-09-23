@@ -95,7 +95,6 @@ button {
 .movie-results {
     max-width: 800px;
     line-height: 1.5em;
-    border: 2px solid var(--movie);
 }
 
 #title {
@@ -131,7 +130,11 @@ button {
 }
 
 footer {
-        bottom: 0;
-        width: 100%;
-        padding-top: 30px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    padding-right: 20px;
 }
