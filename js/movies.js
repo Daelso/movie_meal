@@ -14,6 +14,8 @@ var favoriteBtn = $('#favorite')
 
 var storeTitle = JSON.parse(localStorage.getItem('movie_title')) || [];
 
+var storeIMDB = JSON.parse(localStorage.getItem("imdb_link")) || [];
+
 
 
 
@@ -175,7 +177,10 @@ $(document).on('click', '#favoriteBtn', function () {
 
 	localStorage.setItem("movie_title", JSON.stringify(storeTitle))
 
+	var storeIMDBLink = $( "a" ).attr( "href")
+	storeIMDB.push(storeIMDBLink)
 
+	localStorage.setItem("imdb_link", JSON.stringify(storeIMDB))
 
 
 
