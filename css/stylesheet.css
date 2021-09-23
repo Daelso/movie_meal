@@ -41,7 +41,7 @@ input[type=text] {
 
 /* when the input is clicked, it has a dark border framed by a lighter green border*/
 input[type=text]:focus {
-    border: 3px solid var(--food-light);
+    border: 3px solid var(--food-light); 
 }
 
 select {
