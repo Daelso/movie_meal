@@ -1,4 +1,7 @@
 var favMoviesUL = $('#fav_movies')
+var clearBtn = $('<button>').text("Clear Favorite Movies");
+clearBtn.attr('id', 'clearBtn');
+
 
 
 
@@ -20,7 +23,8 @@ for (var i = 0; i < storeTitle.length; i++) {
         text : " IMDB"
     });
 
-    newLi.append(imdbLinks)
+    newLi.append(imdbLinks);
+
 
 
 }
