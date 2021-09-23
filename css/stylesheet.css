@@ -74,7 +74,7 @@ select {
   padding: 20px 20px;
   border: 2px solid var(--movie);
   border-radius: 4px;
-  background-color: white;
+  background-color: white; 
 }
 
 button {
