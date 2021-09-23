@@ -183,7 +183,7 @@ $(document).on('click', '#favoriteBtn', function () {
 
 	localStorage.setItem("movie_title", JSON.stringify(storeTitle))
 
-	var storeIMDBLink = $( "a" ).attr( "href")
+	var storeIMDBLink = $(this).parent().siblings('#imdb-link').children().attr( "href")	
 	storeIMDB.push(storeIMDBLink)
 
 	localStorage.setItem("imdb_link", JSON.stringify(storeIMDB))
