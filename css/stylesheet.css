@@ -70,11 +70,11 @@ input[type=text]:focus {
 }
 
 select {
-    width: 100%;
+  width: 100%;
   padding: 20px 20px;
   border: 2px solid var(--movie);
   border-radius: 4px;
-  background-color: white;
+  background-color: white; 
 }
 
 button {
@@ -128,6 +128,34 @@ button {
     display: flex;
     flex-direction: column;
 }
+
+/* 
+    ==================================Favorites web page styles================================
+*/
+
+#title-movies {
+    text-align: center;
+    color: var(--movie);
+    text-decoration: underline;
+}
+
+#title-meals {
+    text-align: center;
+    color: var(--food-dark);
+    text-decoration: underline;
+}
+
+#fav-meals {
+    list-style-type: none;
+}
+
+#fav_films {
+    padding: 10px;
+}
+
+/* 
+    ==================================Favorites web page styles================================
+*/
 
 footer {
     padding-top: 50px;
