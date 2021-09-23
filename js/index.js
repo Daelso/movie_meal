@@ -13,6 +13,8 @@ var favoriteBtn = $('#favorite')
 
 var submitBtn = $('#submit')
 
+var movieBox = $('#movieBox')
+
 
 var storeTitle = JSON.parse(localStorage.getItem('movie_title')) || [];
 
@@ -122,6 +124,8 @@ function queryMovieDB(moviefromGenre) {
 			newBtn.attr("style", "background-color: #3434eb; color: white; border-radius: 4px; border: none; margin-bottom: 15px;")
 			favoriteBtn.empty(newBtn)
 			favoriteBtn.append(newBtn)
+
+            movieBox.attr("style", "border: 2px solid #DB4535; display: flex; list-style:none; padding: 10px; flex-direction: column; flex-wrap:wrap; max-width: 800px; line-height: 1.5em;") //Movie Box here
 
 
 
