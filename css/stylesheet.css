@@ -1,0 +1,64 @@
+:root {
+    --movie: #DB4535;
+    --food-dark: #3B8F31;
+    --food-light:#51DB40;
+    --main-dark: #148A8F;
+    --main-light: #2AD4DB;
+}
+
+/* font-family: 'Scheherazade New', serif; */
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lora', serif;
+}
+
+header {
+    background: var(--main-dark);
+    color: white;
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+button {
+    background: var(--main-light);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.genre-search-container {
+    max-width: 300px;
+}
+
+.flex-container {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+        bottom: 0;
+        width: 100%;
+        padding-top: 30px;
+}
