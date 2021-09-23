@@ -13,7 +13,7 @@ body, html {
 }
 
 body {
-
+    font-family: 'Lora', serif;
 }
 
 header {
@@ -21,6 +21,7 @@ header {
     color: white;
     padding: 50px;
     font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
 }
 
 h1,
@@ -28,10 +29,20 @@ h2 {
     text-align: center;
 }
 
-form {
-    border: 1px solid black;
-    width: 100%;
-    justify-content: space-between;
+button {
+    background: var(--main-light);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.genre-search-container {
+    max-width: 300px;
 }
 
 .flex-container {
@@ -42,11 +53,11 @@ form {
 }
 
 .wrapper {
-    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
-        position: absolute;
         bottom: 0;
         width: 100%;
         padding-top: 30px;
