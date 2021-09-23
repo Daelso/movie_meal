@@ -77,19 +77,20 @@ select {
   background-color: white; 
 }
 
-button {
+
+#submit {
     background: var(--main-light);
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
 }
 
+
 .genre-search-container {
-    max-width: 300px;
+    max-width: 200px;
 }
 
 .movie-results {
