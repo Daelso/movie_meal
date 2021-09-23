@@ -28,6 +28,31 @@ h2 {
     text-align: center;
 }
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: var(--main-light);
+  }
+
+nav ul li {
+      display: inline; 
+      float: right;
+  }
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: var(--main-dark); 
+}
+
 /* changes the look of the find some tasty recipes to have a green border slightly rounded with the width taking up the length of the page*/
 input[type=text] {
     width: 100%;
