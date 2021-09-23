@@ -6,8 +6,6 @@
     --main-light: #2AD4DB;
 }
 
-/* font-family: 'Scheherazade New', serif; */
-
 body, html {
     height: 100%;
 }
@@ -16,6 +14,7 @@ body {
     font-family: 'Lora', serif;
 }
 
+/* adds Movie & Meal and the text underneath at the top of the screen taking up the entire width with an aqua-like background */
 header {
     background: var(--main-dark);
     color: white;
@@ -27,6 +26,30 @@ header {
 h1,
 h2 {
     text-align: center;
+}
+
+/* changes the look of the find some tasty recipes to have a green border slightly rounded with the width taking up the length of the page*/
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: 2px solid var(--food-dark);
+    border-radius: 4px;
+  }
+
+
+/* when the input is clicked, it has a dark border framed by a lighter green border*/
+input[type=text]:focus {
+    border: 3px solid var(--food-light);
+}
+
+select {
+    width: 100%;
+  padding: 20px 20px;
+  border: 2px solid var(--movie);
+  border-radius: 4px;
+  background-color: white;
 }
 
 button {
