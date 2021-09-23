@@ -1,0 +1,53 @@
+:root {
+    --movie: #DB4535;
+    --food-dark: #3B8F31;
+    --food-light:#51DB40;
+    --main-dark: #148A8F;
+    --main-light: #2AD4DB;
+}
+
+/* font-family: 'Scheherazade New', serif; */
+
+body, html {
+    height: 100%;
+}
+
+body {
+
+}
+
+header {
+    background: var(--main-dark);
+    color: white;
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+form {
+    border: 1px solid black;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.flex-container {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    border: 1px solid green;
+}
+
+footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding-top: 30px;
+}
