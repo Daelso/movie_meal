@@ -1,0 +1,169 @@
+:root {
+    --movie: #DB4535;
+    --food-dark: #3B8F31;
+    --food-light:#51DB40;
+    --main-dark: #148A8F;
+    --main-light: #2AD4DB;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lora', serif;
+}
+
+/* adds Movie & Meal and the text underneath at the top of the screen taking up the entire width with an aqua-like background */
+header {
+    background: var(--main-dark);
+    color: white;
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: var(--main-light);
+  }
+
+nav ul li {
+      display: inline; 
+      float: right;
+  }
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: var(--main-dark); 
+}
+
+/* changes the look of the find some tasty recipes to have a green border slightly rounded with the width taking up the length of the page*/
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: 2px solid var(--food-dark);
+    border-radius: 4px;
+  }
+
+
+/* when the input is clicked, it has a dark border framed by a lighter green border*/
+input[type=text]:focus {
+    border: 3px solid var(--food-light); 
+}
+
+select {
+  width: 100%;
+  padding: 20px 20px;
+  border: 2px solid var(--movie);
+  border-radius: 4px;
+  background-color: white; 
+}
+
+
+#submit {
+    background: var(--main-light);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; 
+}
+
+
+.genre-search-container {
+    max-width: 200px;
+}
+
+.movie-results {
+    max-width: 800px;
+    line-height: 1.5em;
+}
+
+#title {
+    color: var(--movie);
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+#imdb-link a{
+    color: var(--movie);
+    font-style: italic;
+}
+
+#plot {
+    padding-bottom: 20px;
+}
+
+#poster {
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+    ==================================Favorites web page styles================================
+*/
+
+#title-movies {
+    text-align: center;
+    color: var(--movie);
+    text-decoration: underline;
+}
+
+#title-meals {
+    text-align: center;
+    color: var(--food-dark);
+    text-decoration: underline;
+}
+
+#fav-meals {
+    list-style-type: none;
+}
+
+#fav_films {
+    padding: 10px;
+}
+
+/* 
+    ==================================Favorites web page styles================================
+*/
+
+footer {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    padding-right: 20px;
+}

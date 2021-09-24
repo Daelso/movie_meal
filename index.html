@@ -5,19 +5,183 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Movie & Meal</title>
+  <title>Movie & Meal | A Generator for Indecisive Hungry Movie Buffs</title>
   <meta name="description" content="A simple site to recommend a movie and meal pairing!">
 
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
-  <link rel="stylesheet" href="./assets/stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/stylesheet.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 
 </head>
 
 <body>
+  <section id="landing" class="landing">
+    <div class="wrapper">
+      <header>
+        <h1>Movie & Meal </h1>
+        <h2>A Generator for Indecisive and  Hungry Movie Buffs</h2>
+      </header>
 
 <!-- test comment  -->
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>    
 	<script src="./assets/index.js"></script>
+      <nav>
+        <ul>
+          <li><a href="./favorites.html">Favorites</a></li>
+          <li><a href="./index.html">Home</a></li>
+        </ul>
+      </nav>
+
+      <section id="form">
+        <form>
+          <span class="sr-only">Search for a recipe using a keyword of your choosing and search for a movie using your genre of interest. You'll be provided with recipes and movies based on your search.</span>
+          <div class="form-inputs flex-container">
+            <div class="food-search-container">
+              <label for="food-search">Find some tasty recipes!</label>
+              <input
+                type="text"
+                id="food-search"
+                name="food-search"
+                placeholder="Try 'chicken' or 'vegan'"
+              />
+            </div>
+
+
+            <div class="genre-search-container">
+              <label for="genre-search">Choose a movie genre!</label>
+              <select id="genre-search" name="genre-search">
+                <option value="28">Action</option>
+                <option value="12">Adventure</option>
+                <option value="16">Animation</option>
+                <option value="35">Comedy</option>
+                <option value="80">Crime</option>
+                <option value="99">Documentary</option>
+                <option value="18">Drama</option>
+                <option value="14">Fantasy</option>
+                <option value="36">History</option>
+                <option value="27">Horror</option>
+                <option value="9648">Mystery</option>
+                <option value="10749">Romance</option>
+                <option value="878">Science Fiction</option>
+                <option value="53">Thriller</option>
+              </select>
+            </div>
+            <div class="Recipe-search-container">
+              <label for="cuisine-search">Choose a Cuisine!</label>
+              <select id="cuisine-search" name="cuisine-search">
+                <option value="28">African</option>
+                <option value="12">American</option>
+                <option value="16">British</option>
+                <option value="35">Cajun</option>
+                <option value="80">Caribbean</option>
+                <option value="99">Chinese</option>
+                <option value="18">Eastern European</option>
+                <option value="14">European</option>
+                <option value="36">French</option>
+                <option value="27">German</option>
+                <option value="9648">Greek</option>
+                <option value="10749">Indian</option>
+                <option value="878">Irish</option>
+                <option value="55">Italian</option>
+                <option value="27">Japanese</option>
+                <option value="9658">Jewish</option>
+                <option value="10756">Korean</option>
+                <option value="876">Latin American</option>
+                <option value="3940">Mediterranean</option>
+                <option value="5452">Mexican</option>
+                <option value="5267">Middle Eastern</option>
+                <option value="45">Nordic</option>
+                <option value="23">Southern</option>
+                <option value="89">Spanish</option>
+                <option value="62">Thai</option>
+                <option value="44">Vietnamese</option>
+              </select>
+            </div>
+          </div>
+          <!-- /.form-inputs -->
+
+          <div class="button-container submit-button"></div>
+            <button type="submit" id="submit">Submit</button>
+          
+        </form>
+      </section>
+      <!-- <!-- /#form  -->
+    </div>
+    <!-- /.wrapper -->
+  </section>
+  <!-- /#landing -->
+
+  <div class="wrapper">
+    <main>
+      <section id="results" class="flex-container">
+        <span class="sr-only" id="accessibility-results-heading">
+          <h2>Results</h2> 
+          All links on this page open in a new tab.
+        </span>
+        <section id="recipes" class="results-container flex-container">
+          <h3>Recipes</h3>
+          <ul class="recipe-results flex-container">
+            <!-- recipe results append here -->
+          </ul>
+          <!-- /.recipe-results -->
+        </section>
+        <!-- / #recipes -->
+
+        <section id="movies" class="results-container flex-container">
+          <h3>Movies</h3>
+          <ul id="movieBox" class="movie-results flex-container" style="list-style: none;">
+            <li id="title"></li>
+            <li id="release-date"></li>
+            <li id="runtime"></li>
+            <li id="imdb-link"></li>
+            <li id="rating"></li>
+            <li id ="plot"></li>
+            <li id="favorite"></li>
+            <li id ="poster"></li>
+          </ul>
+        
+        </section>
+      </section>
+      
+    </main>
+  </div>
+  <footer>
+    <p>
+      <strong>Made by:</strong> Molly, Chase, Jaraad, and Kiyona
+    </p>
+    <p>
+      <strong>Data from:</strong>
+      <a
+        href="https://www.themoviedb.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >The Movie Database</a
+      >
+      &
+      <a
+        href="https://spoonacular.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Spoonacular</a
+      >
+      
+    </p>
+
+  </footer>
+<!-- Jqueries -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>    
+
+<script src="./js/index.js"></script>
 </body>
 </html>
