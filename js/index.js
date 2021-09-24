@@ -121,7 +121,12 @@ function queryMovieDB(moviefromGenre) {
 
 			var newBtn = $('<button>').text("Favorite the Movie")
 			newBtn.attr('id', 'favoriteBtn')
-			newBtn.attr("style", "background-color: #3434eb; color: white; border-radius: 4px; border: none; margin-bottom: 15px;")
+			newBtn.attr("style", "background-color: #2AD4DB; color: white; border-radius: 4px; border: none; margin-bottom: 15px;")
+			newBtn.mouseenter(function() {
+				$(this).attr("style", "background-color: #DB4535; cursor: pointer;")
+			}).mouseleave(function() {
+				 $(this).attr("style", "background-color: #2AD4DB; ");
+			});
 			favoriteBtn.empty(newBtn)
 			favoriteBtn.append(newBtn)
 
