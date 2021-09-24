@@ -94,7 +94,7 @@ function queryMovieDB(moviefromGenre) {
 		movieID = moviefromGenre
 	}
 
-	var fetchMovie = "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=2be50216a9231d782c1ba136d60ba871&language=en&genre=27"
+	var fetchMovie = "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=2be50216a9231d782c1ba136d60ba871&language=en"
 
 	fetch(fetchMovie)
         .then(function (response) {
