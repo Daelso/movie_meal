@@ -11,10 +11,6 @@ var userScore = $('#rating')
 var runTime = $('#runtime')
 var favoriteBtn = $('#favorite')
 
-var submitBtn = $('#submit')
-
-var movieBox = $('#movieBox')
-
 
 var storeTitle = JSON.parse(localStorage.getItem('movie_title')) || [];
 
@@ -125,8 +121,6 @@ function queryMovieDB(moviefromGenre) {
 			favoriteBtn.empty(newBtn)
 			favoriteBtn.append(newBtn)
 
-            movieBox.attr("style", "border: 2px solid #DB4535; display: flex; list-style:none; padding: 10px; flex-direction: column; flex-wrap:wrap; max-width: 800px; line-height: 1.5em;") //Movie Box here
-
 
 
 		}})};
@@ -183,7 +177,7 @@ $(document).on('click', '#favoriteBtn', function () {
 
 	localStorage.setItem("movie_title", JSON.stringify(storeTitle))
 
-	var storeIMDBLink = $(this).parent().siblings('#imdb-link').children().attr( "href")	
+	var storeIMDBLink = $( "a" ).attr( "href")
 	storeIMDB.push(storeIMDBLink)
 
 	localStorage.setItem("imdb_link", JSON.stringify(storeIMDB))
@@ -191,17 +185,3 @@ $(document).on('click', '#favoriteBtn', function () {
 
 
 })
-
-
-submitBtn.on('click', chooseGenreID)
-
-
-function chooseGenreID(event) {
-    event.preventDefault()
-    var e = document.getElementById("genre-search"); //can't use jquery apparently
-
-	var genreID = e.value
-	getGenreList(genreID)
-
-
-}
