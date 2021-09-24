@@ -24,7 +24,7 @@ for (var i = 0; i < storeTitle.length; i++) {
 
 }
     if(storeTitle.length > 0){
-        newLi.append('<li><button id= "clear" style= "margin-top: 25px; vertical-align: middle;"> Clear Movies </button> </li>')
+        newLi.append('<li><button id= "clear" style= "margin-top: 25px; vertical-align: middle; background-color: #2AD4DB; border-radius: 4px; cursor: pointer;"> Clear Movies </button> </li>')
         //appends the clear movie button if there are favorited movies
 
     }}
