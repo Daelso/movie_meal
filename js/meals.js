@@ -24,10 +24,10 @@ function queryCuisineDB(){
 			mealImage.empty()
 			mealImage.append("<img src='"+ foodImage + "'></img>")
 
-        var cuisineOption = data.results[randomArray].id
-        console.log(cuisineOption)
+        var recipeOption = data.results[randomArray].id
+        console.log(recipeOption)
         
-        cuisineIdTransfer (cuisineOption)
+        recipeIdTransfer (recipeOption)
 
 
          // 
@@ -35,9 +35,9 @@ function queryCuisineDB(){
         });
 }
 
-    function cuisineIdTransfer (cuisineId) {
-        if (cuisineId) {
-            var mealId = cuisineId
+    function recipeIdTransfer (recipeId) {
+        if (recipeId) {
+            var mealId = recipeId
         }
 
         var getRecipeUrl = "https://api.spoonacular.com/recipes/" + mealId + "/ingredientWidget.json?&apiKey=" + APIKey
@@ -50,7 +50,10 @@ function queryCuisineDB(){
                 console.log(data)
             console.log(data.ingredients[0].name);
     
-        recipeIngredients.text(data.ingredients[0].name)
+            for (var i= 0; i < data.ingredients.length; i++) {
+                var ingredientsText = $('<p>').text(data.ingredients[i].name)
+                recipeIngredients.append(ingredientsText)         
+            }
         });
 
     }
