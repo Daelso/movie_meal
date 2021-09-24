@@ -1,6 +1,5 @@
 var favMoviesUL = $('#fav_movies')
-var clearBtn = $('<button>').text("Clear Favorite Movies");
-clearBtn.attr('id', 'clearBtn');
+
 
 
 
@@ -9,7 +8,7 @@ var storeTitle = JSON.parse(localStorage.getItem('movie_title')) || [];
 
 var storeIMDB = JSON.parse(localStorage.getItem("imdb_link")) || [];
 
-
+function displayandClear(){
 for (var i = 0; i < storeTitle.length; i++) {
     var newLi = $("<li>").text(storeTitle[i])
     newLi.attr("style", "text-align: center;")
@@ -20,11 +19,34 @@ for (var i = 0; i < storeTitle.length; i++) {
         id : "imdb_links",
         name : "imdb",
         href : storeIMDB[i],
-        text : " IMDB"
+        text : " IMDB",
+        style: "text-decoration: none"
     });
 
     newLi.append(imdbLinks);
 
+}
+    if(storeTitle.length > 0){
+        newLi.append('<li><button id= "clear" style= "margin-top: 25px; vertical-align: middle;"> Clear Movies </button> </li>')
+
+
+    }
 
 
 }
+
+    
+    
+    
+
+displayandClear()
+
+
+
+
+$(document).on('click', '#clear', function () {
+    localStorage.removeItem("movie_title")
+    localStorage.removeItem("imdb_link")
+    location.reload()
+
+})
