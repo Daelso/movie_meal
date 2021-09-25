@@ -36,10 +36,8 @@
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>    
 	<script src="./assets/index.js"></script>
       <nav>
-        <ul>
-          <li><a href="./favorites.html">Favorites</a></li>
-          <li><a href="./index.html">Home</a></li>
-        </ul>
+          <a href="./favorites.html">Favorites</a>
+          <a href="./index.html">Home</a>
       </nav>
 
       <section id="form">
@@ -129,23 +127,25 @@
           All links on this page open in a new tab.
         </span>
         <section id="recipes" class="results-container flex-container">
-          <h3>Recipes</h3>
-          
-          <div id="food-title"></div>
+          <h3>Recipes:</h3>
+          <div id="food-results">
+            <div id="food-title"></div>
 
-          <div id="image"></div>
+            <div id="image"></div>
 
-          <div id="cuisineRecipe"></div>
+            <div id="cuisineRecipe"></div>
 
-          <ul class="recipe-results flex-container">
-            <!-- recipe results append here -->
-          </ul>
+            <ul class="recipe-results flex-container">
+              <!-- recipe results append here -->
+            </ul>
           <!-- /.recipe-results -->
+          </div>
         </section>
         <!-- / #recipes -->
+        
 
         <section id="movies" class="results-container flex-container">
-          <h3>Movies</h3>
+          <h3>Movies:</h3>
           <ul id="movieBox" class="movie-results flex-container" style="list-style: none;">
             <li id="title"></li>
             <li id="release-date"></li>
