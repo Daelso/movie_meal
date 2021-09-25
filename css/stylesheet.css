@@ -28,7 +28,7 @@ h2 {
     text-align: center;
 }
 
-nav ul {
+nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -36,20 +36,16 @@ nav ul {
     background: var(--main-light);
   }
 
-nav ul li {
-      display: inline; 
-      float: right;
-  }
-
-nav ul li a {
-  display: block;
+nav a {
+  display: inline; 
+  float: right;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-nav ul li a:hover {
+nav a:hover {
     background: var(--main-dark); 
 }
 
@@ -77,6 +73,16 @@ select {
   background-color: white; 
 }
 
+#cuisine-search {
+    border: 2px solid var(--food-dark);
+}
+
+.Recipe-search-container,
+.genre-search-container  {
+    padding-top: 10px;
+    max-width: 200px;
+}
+
 
 #submit {
     background: var(--main-light);
@@ -88,13 +94,12 @@ select {
     font-size: 16px; 
 }
 
-
-.genre-search-container {
-    max-width: 200px;
+#recipes,
+#movies {
+    align-items: center;
 }
 
 .movie-results {
-    max-width: 800px;
     line-height: 1.5em;
 }
 
@@ -173,4 +178,16 @@ footer p {
 background-color: red;
 
 
+}
+
+@media screen and (max-width: 992px) {
+    nav {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    nav a {
+        font-size: 25px;
+        width: 100%
+    }
 }

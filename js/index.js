@@ -14,6 +14,7 @@ var favoriteBtn = $('#favorite')
 var submitBtn = $('#submit')
 
 var movieBox = $('#movieBox')
+var recipeBox = $('#food-results')
 
 
 var storeTitle = JSON.parse(localStorage.getItem('movie_title')) || [];
@@ -280,6 +281,7 @@ function queryCuisineDB(meals){
                 var ingredientsText = $('<p>').text(data.ingredients[i].name)
                 recipeIngredients.append(ingredientsText)         
             }
+			recipeBox.attr("style", "border: 2px solid #51DB40; display: flex; list-style:none; padding: 10px; flex-direction: column; flex-wrap:wrap; max-width: 800px; line-height: 1.5em;") //Movie Box here
         });
 
     }
