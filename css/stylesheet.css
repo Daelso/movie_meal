@@ -28,6 +28,8 @@ h2 {
     text-align: center;
 }
 
+
+/* Home and favorites bar on index.html and favorites.html */
 nav {
     list-style-type: none;
     margin: 0;
@@ -65,6 +67,8 @@ input[type=text]:focus {
     border: 3px solid var(--food-light); 
 }
 
+
+/* makes the drop down menu as width 100%,rounded border */
 select {
   width: 100%;
   padding: 20px 20px;
@@ -79,11 +83,11 @@ select {
 
 .Recipe-search-container,
 .genre-search-container  {
-    padding-top: 10px;
-    max-width: 200px;
+    padding-top: 30px;
+    text-align: center;
 }
 
-
+/* styles the submit button below the drop down menu */
 #submit {
     background: var(--main-light);
     border: none;
@@ -99,6 +103,7 @@ select {
     align-items: center;
 }
 
+/* allows space in between lines in the movie descriptions */
 .movie-results {
     line-height: 1.5em;
 }
@@ -180,6 +185,8 @@ background-color: red;
 
 }
 
+
+/* collapses the navigation bar on smaller screens for easy accessibility */
 @media screen and (max-width: 992px) {
     nav {
         flex-direction: column;
