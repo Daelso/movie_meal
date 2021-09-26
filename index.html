@@ -45,7 +45,8 @@
             </div>
 
 
-            <div class="genre-search-container">
+<!-- bulma style: sets the movie and food results into separate columns and maximizes their width -->
+            <div class="genre-search-container column is-full">
               <label for="genre-search">Choose a movie genre!</label>
               <select id="genre-search" name="genre-search">
                 <option value="28">Action</option>
@@ -97,9 +98,13 @@
             </div>
           </div>
           <!-- /.form-inputs -->
-
-          <div class="button-container submit-button"></div>
-            <button type="submit" id="submit">Submit</button>
+          
+<!-- bulma styles: .container allows to center the container on larger screens -->
+          <div class="button-container">
+            <div class="vertical-center container">
+              <button type="submit" id="submit">Submit</button>
+            </div>
+          </div>
           
         </form>
       </section>
@@ -128,7 +133,7 @@
             <div id="cuisineRecipe"></div>
 
             <ul class="recipe-results flex-container">
-              <!-- recipe results append here -->
+              <!-- recipe results append here --> 
             </ul>
           <!-- /.recipe-results -->
           </div>
