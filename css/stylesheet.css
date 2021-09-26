@@ -79,9 +79,8 @@ select {
 
 .Recipe-search-container,
 .genre-search-container  {
-    padding-top: 30px;
-    max-width: 100%;
-    text-align: center;
+    padding-top: 10px;
+    max-width: 200px;
 }
 
 
@@ -94,10 +93,6 @@ select {
     text-decoration: none;
     font-size: 16px; 
 }
-
-.vertical-center {
-    text-align: center;
-  } 
 
 #recipes,
 #movies {
