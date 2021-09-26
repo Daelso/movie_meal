@@ -10,6 +10,7 @@ var imdbLink = $('#imdb-link')
 var userScore = $('#rating')
 var runTime = $('#runtime')
 var favoriteBtn = $('#favorite')
+var favoriteMealBtn = $('#favMeal')
 
 var submitBtn = $('#submit')
 
@@ -20,6 +21,9 @@ var recipeBox = $('#food-results')
 var storeTitle = JSON.parse(localStorage.getItem('movie_title')) || [];
 
 var storeIMDB = JSON.parse(localStorage.getItem("imdb_link")) || [];
+
+var storefavMealTitle = JSON.parse(localStorage.getItem('meal_title')) || [];
+
 
 var mealTitle = $('#food-title')
 var mealImage = $('#image')
@@ -201,7 +205,14 @@ $(document).on('click', '#favoriteBtn', function () {
 
 	localStorage.setItem("imdb_link", JSON.stringify(storeIMDB))
 
+})
 
+$(document).on('click', '#favMeal', function () {
+	
+	var storeMealTitle = mealTitle.text()
+	storefavMealTitle.push(storeMealTitle)
+
+	localStorage.setItem("meal_title", JSON.stringify(storefavMealTitle))
 
 })
 
@@ -250,6 +261,16 @@ function queryCuisineDB(meals){
         var foodImage = data.results[randomArray].image
 			mealImage.empty()
 			mealImage.append("<img src='"+ foodImage + "'></img>")
+		var newBtn = $('<button>').text("Favorite this meal")
+		newBtn.attr('id', 'favoriteMealBtn')
+		newBtn.attr("style", "background-color: #2AD4DB; color: white; border-radius: 4px; border: none; margin-bottom: 15px;")
+		newBtn.mouseenter(function() {
+		$(this).attr("style", "background-color: #51DB40; cursor: pointer; color: white; border-radius: 4px; border: none; margin-bottom: 15px;")
+			}).mouseleave(function() {
+		$(this).attr("style", "background-color: #2AD4DB; color: white; border-radius: 4px; border: none; margin-bottom: 15px;");
+			});
+		favoriteMealBtn.empty(newBtn)
+		favoriteMealBtn.append(newBtn)
 
         var recipeOption = data.results[randomArray].id
         console.log(recipeOption)
@@ -278,7 +299,7 @@ function queryCuisineDB(meals){
             console.log(data.ingredients[0].name);
     
             for (var i= 0; i < data.ingredients.length; i++) {
-                var ingredientsText = $('<p>').text(data.ingredients[i].name)
+                var ingredientsText = $('<p>').text(data.ingredients[i].name + " " + data.ingredients[i].amount.us.value + " " + data.ingredients[i].amount.us.unit +  ",")
                 recipeIngredients.append(ingredientsText)         
             }
 			recipeBox.attr("style", "border: 2px solid #51DB40; display: flex; list-style:none; padding: 10px; flex-direction: column; flex-wrap:wrap; max-width: 800px; line-height: 1.5em;") //Movie Box here
