@@ -1,6 +1,9 @@
 # Movie & Meal
 
 ## Description
+In this project, I worked with my fellow teammates (Molly, Chase and Jaraad) to create a web application that lets the user randomnly generate a movie and meal for them. This app purpose is for busy professionals who are too preoccupied to decide what meal that would like to cook after a long work day or a movie to sit down watch after a long work day. 
+
+
 The web page will generate a randomly selected movie and meal for the end user to watch and make when the random button is selected. For the meals, it will include the Recipe Name, how long it takes to cook, the ingredients list, and the steps to make it. For the movies, it will include movie title, movie genre, the run time, and a brief synopsis.
 
 This is for those of us who can't decide on a movie to watch and/or a meal to make. This is a useful tool for busy adults who have come home from work or school and just want some of the decision to be chosen for them. This was a great lesson in all of the subjects we have learned so far: html, css, javascript, and APIs and gives the team the confidence to create their own websites with multiple functions in the future.
@@ -16,7 +19,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
    ![alt text](assets/images/screenshot.png) 
    ```
 ## Credits
-- Kiyona Bently (https://github.com/Kbentley8)
+- Kiyona Bentley (https://github.com/Kbentley8)
 - Chase Murtaugh (https://github.com/Daelso)
 - Molly Singmaster (https://github.com/mollymoo002)
 - Jaraad Hines (https://github.com/jhines19)
