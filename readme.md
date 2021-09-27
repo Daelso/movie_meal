@@ -1,12 +1,20 @@
 # Movie & Meal
 
 ## Description
-In this project, I worked with my fellow teammates (Molly, Chase and Jaraad) to create a web application that lets the user randomnly generate a movie and meal for them. This app purpose is for busy professionals who are too preoccupied to decide what meal that would like to cook after a long work day or a movie to sit down watch after a long work day. 
+In this project, I worked with my fellow teammates (Molly, Chase, and Jaraad) to create a web application that lets the user randomnly generate a movie and meal for them. This app's purpose is for busy professionals who are too preoccupied to decide what meal that they would like to cook or a movie to sit down and watch after a long work day. The web page will generate a randomly selected movie and meal for the end user to watch and make when the random button is selected. For the meals, it will include the Recipe Name, how long it takes to cook, the ingredients list, and the steps to make it. For the movies, it will include movie title, movie genre, the run time, and a brief synopsis.
+ This was a great lesson in all of the subjects we have learned so far: html, css, javascript, and APIs and gives the team the confidence to create their own websites with multiple functions in the future.
 
 
-The web page will generate a randomly selected movie and meal for the end user to watch and make when the random button is selected. For the meals, it will include the Recipe Name, how long it takes to cook, the ingredients list, and the steps to make it. For the movies, it will include movie title, movie genre, the run time, and a brief synopsis.
+# Link to Movie and Meal Application
+[Link to Movie and Meal ](https://daelso.github.io/movie_meal/index.html)
 
-This is for those of us who can't decide on a movie to watch and/or a meal to make. This is a useful tool for busy adults who have come home from work or school and just want some of the decision to be chosen for them. This was a great lesson in all of the subjects we have learned so far: html, css, javascript, and APIs and gives the team the confidence to create their own websites with multiple functions in the future.
+[Link to Presentation ](https://docs.google.com/presentation/d/1heBz7YhCmFjRhbR97zg9FeY10vWxA5If48xJvOd6k3Y/edit?usp=sharing)
+
+# Screenshots
+![Screen Shot 2021-09-27 at 12 45 54 PM](https://user-images.githubusercontent.com/88289885/134956498-cc3561da-e000-4867-80e0-11b87fedb4d8.png)
+![Screen Shot 2021-09-27 at 12 46 03 PM](https://user-images.githubusercontent.com/88289885/134956615-ff6b73cd-703d-4981-b681-16bedf29440d.png)
+![Screen Shot 2021-09-27 at 12 46 13 PM](https://user-images.githubusercontent.com/88289885/134956613-94ec60c9-a4ce-4d03-8ee8-c81ba575b1ab.png)
+![Screen Shot 2021-09-27 at 12 46 24 PM](https://user-images.githubusercontent.com/88289885/134956612-0460c72e-ab82-4246-8b87-54830f3335e2.png)
 
 ## Usage
 - under "Find some tasty Recipes", search for what you would like the recipe to have (for example: chicken, beef, fish, etc).
@@ -29,5 +37,3 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 - https://spoonacular.com/
 - Instructor team
 - https://www.w3schools.com/
-## Features
-If your project has a lot of features, list them here.
