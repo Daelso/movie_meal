@@ -12,9 +12,11 @@ This is for those of us who can't decide on a movie to watch and/or a meal to ma
 - On the results page, you can click the button Add to Favorites to save the movie/meal for later
 - Click on the favorites button on the navigation bar to see your saved favorites
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-   ```md
-   ![alt text](assets/images/screenshot.png) 
-   ```
+
+ ![Movie Example](https://i.gyazo.com/e3add25f0e94dd33725e9091a25dd319.png) 
+ ![Meal Example](https://i.gyazo.com/0cf4c0812776fccf61b4251b2420b5e6.png) 
+  ![Favorites Example](https://i.gyazo.com/820f1aad87de59596b805846dae77379.png) 
+
 ## Credits
 - Kiyona Bently (https://github.com/Kbentley8)
 - Chase Murtaugh (https://github.com/Daelso)
@@ -28,3 +30,6 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 - https://www.w3schools.com/
 ## Features
 If your project has a lot of features, list them here.
+
+## Deployment Link:
+https://daelso.github.io/movie_meal/
